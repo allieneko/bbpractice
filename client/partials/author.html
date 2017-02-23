@@ -1,0 +1,9 @@
+<div ng-controller="quoteController">
+    <h1>Quotes by {{ authorQuotes[0].attribution }}</h1>
+    <a href="/logout">Logout</a>
+    <p ng-repeat="quote in authorQuotes | orderBy: likecount | limitTo: limit track by $index">
+        <a href="#!/author/{{ quote.attribution }}">{{ quote.attribution }}</a> said {{ quote.quote }} on {{ quote.date |
+        date: 'medium' }} ({{ quote.date | timeAgo }}) {{ quote.likecount }} likes this
+    </p>
+    <a href="#!/dashboard">Back to the dashboard</a>
+</div>

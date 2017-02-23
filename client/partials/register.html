@@ -1,0 +1,8 @@
+<h1>Login</h1>
+    <div>
+    <p style="color: red;" ng-repeat='error in errors track by $index'>{{error}}</p>
+    <form ng-submit='register()'>
+        <input type="text" placeholder="Name" ng-model="user.name">
+        <input type="submit" value="Submit">
+    </form>
+</div>
