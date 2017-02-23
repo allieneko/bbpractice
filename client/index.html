@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Quoting Dojo</title>
     <script src="/angular/angular.js"></script>
     <script src="/angular-route/angular-route.js"></script>
     <script src="/angular-timeago/dist/angular-timeago.js"></script>
@@ -12,11 +12,33 @@
     <script src="/factories/quoteFactory.js"></script>
     <script src="/controllers/userController.js"></script>
     <script src="/controllers/quoteController.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <ng-view>
-    </ng-view>
+    <div id="header">
+        <div id="logo" class="inline"><a href="/">Quoting Dojo</a></div>
+        <div id="search" class="inline hidden">
+            <!-- <form action="/search" method="post"> -->
+            <form>
+                <input type="hidden" name="form" value="search">
+                <input type="text" placeholder="Search" name="content" class="rounded">
+            </form>
+        </div>
+        <div id="user" class="inline">
+            <p> {{currentuser.name}} </p>
+        </div>
+        <div id="signout">
+            <form action="/logout" method="get"><input type="submit" value="[Sign Out]"></form>
+        </div>
+    </div>
+    <div id="main">
+        <ng-view></ng-view>
+    </div>
+    <div id="footer">
+            <p>&copy; 2017 Allie Schneider and Michael Gifford</p>
+
+    </div>
 </body>
 
 </html>

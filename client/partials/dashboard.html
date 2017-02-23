@@ -1,10 +1,19 @@
-<h1>Quote Dashboard</h1><a href="/logout">Logout</a>
-
 <div ng-controller="quoteController">
-    <p ng-repeat="quote in quotes | orderBy: likecount | limitTo: limit track by $index">
-        <a href="#!/author/{{ quote.attribution }}">{{ quote.attribution }}</a> said "{{ quote.quote }}" on {{quote.date | date: 'shortDate' }}{{ quote.date | timeAgo: 'MM/dd/yyyy' }} {{ quote.likecount }} likes this  <button ng-click="likeQuote(quote, $index)">{{ quote.userlike }}</button>
-    </p>
-    <button ng-click="showAll()">Show all</button>
-</div>
+    <div class="postbox border rounded">
 
-<a href="#!/add">Add quote</a>
+    <a href="#!/add"><button type="button" name="button">Add quote</button></a>
+    </div>
+    <div ng-repeat="quote in quotes | orderBy: likecount | limitTo: limit track by $index">
+        <div class="postbox border rounded">
+            <h3>{{ quote.quote }}</h3>
+            <a href="#!/author/{{ quote.attribution }}">{{ quote.attribution }}</a> {{quote.date | date: 'shortDate' }}
+            {{ quote.date | timeAgo: 'MM/dd/yyyy' }}
+            <br>{{ quote.likecount }} likes
+            <br>
+            <button ng-click="likeQuote(quote, $index)">{{ quote.userlike }}</button>
+        </div>
+    </div>
+        <div class="postbox border rounded">
+            <a ng-click="showAll()">Show all</a>
+        </div>
+</div>

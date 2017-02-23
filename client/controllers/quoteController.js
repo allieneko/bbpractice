@@ -34,13 +34,13 @@ app.controller('quoteController', function ($scope, $location, $routeParams, tim
         }
     },
 
-        $scope.likeQuote = function (quote, index) {
-            quoteFactory.likeQuote(quote._id, function (data) {
-                // $location.url('/dashboard');
-                console.log(data)
-            })
-            likeToggle(quote, index)
-        };
+    $scope.likeQuote = function (quote, index) {
+        quoteFactory.likeQuote(quote._id, function (data) {
+            // $location.url('/dashboard');
+            console.log(data)
+        })
+        likeToggle(quote, index)
+    };
 
     function likeToggle(quote, index) {
         if (quote.userlike == 'Unlike') {

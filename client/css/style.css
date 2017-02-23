@@ -1,0 +1,330 @@
+@import url('normalize.css');
+
+body {
+    background-color: #E9EBEE;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.4;
+    font-weight: lighter;
+    margin:0;
+    font-size:15px;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.rounded {
+    border-radius: 3px;
+}
+
+input[type=text], input[type=password] {
+    border: 0;
+}
+
+input[type=submit], button {
+    background-color: rgb(30, 119, 237);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.signinbox {
+    margin: auto;
+}
+
+#main div {
+    display: hidden;
+}
+
+#main div:target {
+    display:block;
+}
+
+#signup div {
+    display: hidden;
+}
+
+#signup div:target {
+    display:block;
+}
+
+.signinbox div {
+    display: hidden;
+}
+
+.signinbox div:target {
+    display:block;
+}
+
+.signinbox input[type=text], .signinbox input[type=password], .signinbox[type=email]  {
+    border: 1px solid #DFE0E4;
+    width: 90%;
+    font-size: 14px;
+    padding: 6px 3px;
+    margin: 6px 0;
+}
+
+.signinbox label {
+    display: block;
+    margin-top: 6px;
+}
+
+#header {
+    position:fixed;
+    top:0;
+    left:0;
+    height: 50px;
+    width:100%;
+    background-color: rgb(30, 119, 237);
+    position: relative;
+}
+
+#logo {
+    color:#fff;
+    width: 140px;
+    margin-left: 36px;
+}
+
+#logo a {
+    color:#fff;
+}
+
+#logo a:hover {
+    text-decoration: underline;
+}
+
+#header p {
+    margin:0;
+    color: #fff;
+}
+
+#user {
+    position: absolute;
+    right:70px;
+    top:13px;
+}
+
+#search {
+    position: absolute;
+left: 180px;
+    top:13px;
+}
+
+#search input {
+    padding: 3px 6px;
+}
+
+#logo {
+    position: absolute;
+    left:50px;
+    top:13px;
+}
+
+#main {
+    margin-top: 16px;
+    position: relative;
+}
+
+#footer {
+
+}
+
+#footer p {
+    font-size: 9px;
+    text-align: center;
+}
+
+#compose {
+}
+
+.composebox {
+    padding: 6px;
+}
+
+.composebox input {
+    margin-top: 10px;
+    padding: 6px 16px;
+}
+
+.postbox {
+    width: 340px;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 14px;
+}
+
+.comments {
+    background-color: #F6F7F9;
+    padding: 6px;
+    border-top: 1px solid #DFE0E4;
+
+}
+
+.border {
+    border: 1px solid #DFE0E4;
+}
+
+.avatar
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+}
+
+.comments .avatar, .makecommentbox .avatar {
+    width: 30px;
+    height: 30px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.meta {
+    color: #bbb;
+    font-size: 12px;
+}
+
+.postbox .head {
+    padding: 6px;
+    position: relative;
+}
+
+.postbox .head .post {
+    border-bottom: 1px solid #DFE0E4;
+    width: 100%;
+}
+
+.commentbox {
+    position: relative;
+}
+
+.makecommentbox {
+    margin-top: 12px;
+}
+
+.makecomment input {
+    width: 276px;
+    margin-top: 1px;
+    border: 1px solid #DFE0E4;
+    padding: 6px;
+    font-size: 13px;
+    color: #222;
+}
+
+.makecomment input:focus {
+    border: 1px solid #bbd2f1;
+}
+
+.activity {
+    margin-top: 6px;
+}
+
+.post {
+    font-size: 19px;
+    padding: 12px 0;
+}
+
+
+#flash {
+    position: absolute;
+    display:block;
+    right: 4px;
+    top: 0;
+    width: 120px;
+    padding: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 1px #999;
+}
+
+#flash ul,li {
+    list-style: none;
+    border-bottom: 1px dotted #DFE0E4;
+    list-style-position:inside;
+    margin:5px 0;
+    padding:0;
+    color: crimson;
+}
+
+#flash ul,li:last-child {
+    border-bottom: none;
+}
+
+@keyframes flash {
+    from {opacity:0}
+    to {opacity:.9}
+}
+
+#flash {
+    animation-name: flash;
+    animation-duration: 3s;
+}
+
+
+#signout {
+    position: absolute;
+    right: 6px;
+    top: 13px;
+}
+
+#signout input {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+#signout input:hover {
+    text-decoration: underline;
+}
+
+.delete input {
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    color: crimson;
+}
+
+.delete input:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+::-webkit-input-placeholder {
+   color: #ccc;
+}
+
+:-moz-placeholder: { /* Firefox 18- */
+   color: #ccc;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ccc;
+}
+
+:-ms-input-placeholder {
+   color: #ccc;
+}

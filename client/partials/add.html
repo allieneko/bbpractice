@@ -1,12 +1,21 @@
-<h1>Add a quote!</h1><a href="/logout">Logout</a>
 
 <div ng-controller="quoteController">
-    <div>
-        <p style="color: red;" ng-repeat='error in errors track by $index'>{{error}}</p>
-        <form ng-submit='addQuote()'>
-            <input type="text" placeholder="Quote" ng-model="newQuote.quote">
-            <input type="text" placeholder="Attribution" ng-model="newQuote.attribution"> Said on: <input type="date" ng-model="newQuote.date">
-            <input type="submit" value="Submit">
-        </form>
+    <div id="login">
+        <div class="signinbox">
+            <div class="postbox border rounded">
+                <h4>Add a quote</h4>
+                <form ng-submit='addQuote()'>
+                    <input type="text" placeholder="Quote" ng-model="newQuote.quote">
+                    <br><br><input type="text" placeholder="Attribution" ng-model="newQuote.attribution"><br><br><input type="text" placeholder="Date (YYY-MM-DD)" ng-model="newQuote.date">
+                    <br><br><input type="submit" value="Post">
+                </form>
+                <div id="flash" class="border rounded" ng-repeat='error in errors track by $index'>
+                 <ul>
+                  <li>{{error}}<li>
+                 </ul>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>

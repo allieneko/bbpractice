@@ -1,8 +1,17 @@
-<h1>Login</h1>
-    <div>
-    <p style="color: red;" ng-repeat='error in errors track by $index'>{{error}}</p>
-    <form ng-submit='register()'>
-        <input type="text" placeholder="Name" ng-model="user.name">
-        <input type="submit" value="Submit">
-    </form>
+<div class="postbox border rounded">
+    <div id="login" class="signinbox">
+        <div class="head">
+            <h4>Welcome</h4>
+            <form ng-submit='register()'>
+                <label for=""></label><input type="text" class="rounded" placeholder="Name" ng-model="user.name">
+                <input type="submit" class="rounded" value="Sign In">
+        </form>
+        </div>
+
+
+    <div id="flash" class="border rounded" ng-repeat='error in errors track by $index'>
+     <ul>
+      <li>{{error}}<li>
+     </ul>
+    </div>
 </div>
